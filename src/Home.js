@@ -30,8 +30,8 @@ function Home() {
             <li>love to cook, read, workout, and play volleyball</li>
             <li>also really love <span className="highlight" onClick={handleDonutsClick}>donuts</span></li>
             <li>here's <a 
-              href="/RohanSaxena_Resume.pdf" 
-              download="RohanSaxena_Resume.pdf"
+              href="/RohanSaxena_resume.pdf" 
+              download="RohanSaxena_resume.pdf"
               className="highlight"
               style={{ textDecoration: 'none' }}
             >one page</a> where i brag about myself</li>
