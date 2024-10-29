@@ -1,38 +1,208 @@
-.App {
-  text-align: center;
+/* Container with margins */
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Navbar */
+.navbar {
+    display: flex;
+    gap: 20px;
+    font-size: 1.2rem;
+    margin-bottom: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar a {
+    text-decoration: none;
+    color: #1C1C1C; /* Soft Black */
+    font-weight: 500;
+    margin-left: 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Content Layout */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align items at the top */
+    margin-bottom: 50px;
+    flex: 1;
+    position: relative; /* Add relative positioning */
 }
 
-.App-link {
-  color: #61dafb;
+.text-section {
+    flex-basis: 60%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Name styling */
+.name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1C1C1C;
+    margin-bottom: 0px;
+}
+
+/* Sub text styling */
+.sub-text {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 3px;
+    margin-top: 5px;
+    color: #666; /* Dark Gray */
+}
+
+/* Bullet Points */
+.bullet-points {
+    font-size: 1rem;
+    line-height: 1.5;
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+/* Image Styling */
+.image-section {
+    flex-basis: 35%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    margin-top: 20px; /* Add margin to position the image lower */
+}
+
+.profile-image {
+    width: 100%;
+    max-width: 400px; /* Adjust the max width to make the image larger */
+    border-radius: 10px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    justify-content: flex-star;
+    gap: 20px;
+    position: relative; /* Position the contact section relatively */
+    bottom: 100px; /* Align with the bottom of the image */
+    left: 0; /* Align with the left of the text */
+    transform: translateX(0); /* Adjust the left position to align with the text */
+}
+
+.contact-logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.nav-item {
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 5px;
+    left: 0; /* Change from right to left */
+    background: #E1406D;
+    transition: width 0.3s ease, left 0.3s ease; /* Change right to left */
+}
+
+.nav-item:hover {
+    color: #E1406D;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+    left: 0; /* Change from right to left */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-section {
+        margin-top: 20px;
+        order: 2; /* Move image below text */
+    }
+
+    .contact-section {
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 20px;
+        order: 3; /* Move contact section below image */
+        position: static; /* Reset position for responsive layout */
+    }
+}
+
+/* Highlighted word */
+.highlight {
+    color: #E1406D;
+    cursor: pointer;
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    max-width: 500px; /* Set a maximum width */
+    width: 90%; /* Ensure it is responsive */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for better visibility */
+}
+
+.modal-content img {
+    max-width: 80%;
+    height: auto;
+}
+
+.modal-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: gray;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.modal-content .alt-text {
+    margin-top: 10px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Show modal */
+.modal.show {
+    display: flex;
 }

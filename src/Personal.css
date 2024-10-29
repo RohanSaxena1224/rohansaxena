@@ -1,0 +1,203 @@
+.personal-page {
+  min-height: 100vh;
+  background-color: white;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-start;  /* Change from flex-end to flex-start */
+  margin-bottom: 1rem;
+  padding: 0 rem;  /* Add padding to header instead */
+}
+
+.section {
+  margin-bottom: 1.5rem;
+  padding: 0 2rem;  /* Add padding to sections */
+
+}
+
+.section-toggle {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: -35px;
+  color: var(--text-color);
+}
+
+.toggle-icon {
+  margin-left: 0.5rem;
+}
+
+.section-content {
+  margin-left: -30px;
+}
+
+.book-section {
+  margin-bottom: -90px;
+}
+
+.section-title {
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: -10px;
+}
+
+.book-list {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  padding: 1rem;
+}
+
+.book-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 8rem;
+  padding: 0.5rem;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.book-item:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.book-cover {
+  width: 120px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem 2rem;
+  margin-left: -30px;
+  
+}
+
+.recipe-item {
+  position: relative;
+  aspect-ratio: 1;
+  overflow: hidden;
+}
+
+.recipe-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.recipe-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+}
+
+.recipe-item:hover .recipe-overlay {
+  opacity: 1;
+}
+
+.recipe-title {
+  font-family: inherit;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* If you're not using Tailwind, add these utility classes */
+.bg-white {
+  background-color: white;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.shadow-md {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.relative {
+  position: relative;
+}
+
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
+.hover\:scale-105:hover {
+  transform: scale(1.05);
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 8px 16px;
+  border: 1px solid var(--text-color);
+  border-radius: 4px;
+  background: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  z-index: 1000;  /* Make sure it's above other elements */
+}
+
+.theme-toggle:hover {
+  opacity: 0.8;
+}
+
+/* Light mode (default) */
+.light-mode {
+  --bg-color: white;
+  --text-color: #333;
+  --overlay-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Dark mode */
+.dark-mode {
+  --bg-color: #1a1a1a;
+  --text-color: #fff;
+  --overlay-color: rgba(0, 0, 0, 0.8);
+  --shadow-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Add any other elements that need theme-specific styling */
+
+.book-title {
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
