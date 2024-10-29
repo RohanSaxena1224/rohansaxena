@@ -7,6 +7,16 @@ function Home() {
     setIsModalOpen(true);
   };
 
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleModalClick = (e) => {
+    if (e.target.className === 'modal show') {
+      handleCloseModal();
+    }
+  };
+
   return (
     <>
       <div className="content">
@@ -21,8 +31,7 @@ function Home() {
             <li>also really love <span className="highlight" onClick={handleDonutsClick}>donuts</span></li>
             <li>here's <a 
               href="/RohanSaxena_Resume.pdf" 
-              target="_blank" 
-              rel="noopener noreferrer"
+              download="RohanSaxena_Resume.pdf"
               className="highlight"
               style={{ textDecoration: 'none' }}
             >one page</a> where i brag about myself</li>
@@ -50,8 +59,9 @@ function Home() {
       </div>
 
       {isModalOpen && (
-        <div className="modal show">
+        <div className="modal show" onClick={handleModalClick}>
           <div className="modal-content">
+            <span className="close" onClick={handleCloseModal}>&times;</span>
             <img src="/donuts.jpeg" alt="Donuts" />
             <a 
               href="https://www.eatcops.com/collections/600" 
