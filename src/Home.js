@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { TypeAnimation } from 'react-type-animation';
 
 function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -21,7 +22,18 @@ function Home() {
     <>
       <div className="content">
         <div className="text-section">
-          <h1 className="name">rohan saxena</h1>
+          <h1 className="name">
+            <TypeAnimation
+              sequence={[
+                'rohan saxena'
+              ]}
+              wrapper="span"
+              cursor={false}
+              repeat={0}
+              speed={50}
+              style={{ display: 'inline-block' }}
+            />
+          </h1>
           <p className="sub-text">mechatronic systems engineering & ivey hba</p>
           <p className="sub-text">senior analyst – product & data @ bmo</p>
           
@@ -39,7 +51,11 @@ function Home() {
         </div>
 
         <div className="image-section">
-          <img src="/child_photo.png" alt="Rohan as a child" className="profile-image" />
+          <img 
+            src="/child_photo.png" 
+            alt="Rohan as a child" 
+            className="profile-image" 
+          />
         </div>
       </div>
 

@@ -19,5 +19,10 @@ export const recipes = [
     title: "japanese style salmon cabbage & mushroom",
     image: "/recipe_images/salmon_stiry.jpeg"
   },
+  {
+    id: 5,
+    title: "shrimp fried rice",
+    image: "/recipe_images/shrimp_rice.jpeg"
+  },
   // Add more recipes as needed
 ]; 

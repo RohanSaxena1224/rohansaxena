@@ -62,19 +62,17 @@
 
 /* Image Styling */
 .image-section {
-    flex-basis: 35%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    margin-top: 20px; /* Add margin to position the image lower */
+    position: relative;
+    border-radius: 8px;
+    width: 500px;
+    height: 600px;
 }
 
 .profile-image {
     width: 100%;
-    max-width: 400px; /* Adjust the max width to make the image larger */
-    border-radius: 10px;
-    height: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
 /* Contact Section */
@@ -86,6 +84,7 @@
     bottom: 100px; /* Align with the bottom of the image */
     left: 0; /* Align with the left of the text */
     transform: translateX(0); /* Adjust the left position to align with the text */
+    color: white;  /* Ensure text is white in these sections */
 }
 
 .contact-logo {
