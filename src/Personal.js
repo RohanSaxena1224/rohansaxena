@@ -6,11 +6,12 @@ import { RecipeCard } from './components/RecipeCard';
 
 const books = {
   currentlyReading: [
-    { id: 2, image: "/book_images/kitchen_confidential.avif" },
+    {id: 10, image: "/book_images/emotional_agility.jpg"},
     { id: 8, image: "/book_images/east_eden.jpg" },
     
   ],
   completed: [
+    { id: 2, image: "/book_images/kitchen_confidential.avif" },
     { id: 1, image: "/book_images/how_to_know_a_person.jpg" },
     { id: 4, image: "/book_images/greenlights.jpg" },
     { id: 3, image: "/book_images/midnight_library.jpg" },
