@@ -30,7 +30,7 @@ function Home() {
               wrapper="span"
               cursor={false}
               repeat={0}
-              speed={50}
+              speed={250}
               style={{ display: 'inline-block' }}
             />
           </h1>
