@@ -38,7 +38,7 @@
 }
 
 .book-section {
-  margin-bottom: -90px;
+  margin-bottom: -40px;
 }
 
 .section-title {
@@ -47,6 +47,8 @@
   font-weight: 500;
   margin-bottom: -10px;
 }
+
+/* BOOK SECTION */
 
 .book-list {
   display: flex;
@@ -61,7 +63,10 @@
   align-items: center;
   min-width: 8rem;
   padding: 0.5rem;
+  transition: transform 0.2s;
+  margin-bottom: 1rem;
 }
+
 
 .book-cover {
   width: 120px;
@@ -72,12 +77,46 @@
   transition: transform 0.3s ease;
   cursor: pointer;
   z-index: 1;
+  position: relative;
 }
 
-.book-cover:hover {
+.book-cover:hover{
   transform: scale(1.1);
-  z-index: 2;
+  z-index: 1;
 }
+
+/* Ensure the book cover image is displayed correctly */
+.book-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.star {
+  color: gold; /* Color for full stars */
+  font-size: 1rem; /* Adjust size as needed */
+}
+
+.star.half {
+  color: gold; /* Color for half stars */
+}
+
+.star.gray {
+  color: lightgray; /* Color for empty stars */
+}
+
+.star-rating {
+  margin-top: 5px; /* Add some space between the book cover and stars */
+  display: flex; /* Align stars in a row */
+  justify-content: center; /* Center the stars */
+}
+
+svg {
+  margin: 0 2px; /* Space between stars */
+}
+
+/* RECIPE SECTION*/
 
 .recipe-grid {
   display: grid;
@@ -184,21 +223,5 @@
   --bg-color: white;
   --text-color: #333;
   --overlay-color: rgba(0, 0, 0, 0.7);
-}
-
-/* Dark mode */
-.dark-mode {
-  --bg-color: #1a1a1a;
-  --text-color: #fff;
-  --overlay-color: rgba(0, 0, 0, 0.8);
-  --shadow-color: rgba(255, 255, 255, 0.1);
-}
-
-/* Add any other elements that need theme-specific styling */
-
-.book-title {
-  font-family: inherit;
-  font-size: 1rem;
-  font-weight: 500;
 }
 
