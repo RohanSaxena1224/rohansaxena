@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './Home';  // This will be our About page
 import Personal from './Personal';
+import Projects from './Projects'
 import './App.css';
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
 
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/projects" element={<div>Building 🔨⚙️</div>} />
+            <Route path="/projects" element={<Projects />} />
             <Route path="/personal" element={<Personal />} />
           </Routes>
         </div>
