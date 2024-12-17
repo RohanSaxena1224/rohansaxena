@@ -7,8 +7,8 @@ import {Star, HalfStar} from './components/stars.js';
 
 const books = {
   currentlyReading: [
-    {id: 10, image: "/book_images/emotional_agility.jpg"},
-    { id: 8, image: "/book_images/east_eden.jpg" },
+    {id: 10, image: "/book_images/behave.jpg"},
+    
     
   ],
   completed: [
@@ -19,6 +19,7 @@ const books = {
     { id: 6, image: "/book_images/flash_boys.jpg", rating: 3},
     { id: 8, image: "/book_images/atomic_habits.jpg", rating: 3.5},
     { id: 9, image: "/book_images/jordan_peterson.jpg", rating: 3.5},
+    { id: 8, image: "/book_images/east_eden.jpg", rating: 4},
   ],
   inQueue: [
     { id: 5, image: "/book_images/social_animal.jpg" },

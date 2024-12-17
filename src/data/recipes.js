@@ -24,5 +24,10 @@ export const recipes = [
     title: "shrimp fried rice",
     image: "/recipe_images/shrimp_rice.jpeg"
   },
+  {
+    id: 6,
+    title: "general tso chicken",
+    image: "/recipe_images/general_tso_chicken.jpeg"
+  },
   // Add more recipes as needed
 ]; 
